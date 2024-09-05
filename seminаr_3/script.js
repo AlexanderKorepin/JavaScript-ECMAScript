@@ -92,40 +92,104 @@
 // благодарностью за покупку.
 // Формат вывода сообщения:
 // "Заказ оформлен для {имя покупателя}. Общая стоимость заказа: {общая стоимость заказа} рублей. Спасибо за покупку!"
-class Product {
-    constructor(name, price) {
-        this.name = name;
-        this.price = price;
-    }
-}
-class ShoppingCart {
-    constructor(customerName, initialTotalCost = 0) {
-        this.customerName = customerName;
-        this.items = [];
-        this.totalCost = initialTotalCost;
-    }
-    addItem(product, quantity = 1) {
-        this.items.push({ product, quantity });
-        this.totalCost += product.price * quantity;
-    }
-    getCurrentTotalCost() {
-        return this.totalCost;
-    }
-    checkout() {
-        console.log(`Заказ оформлен для ${this.customerName}. Общая стоимость заказа: ${this.totalCost} рублей. Спасибо за покупку!`);
-    }
+// class Product {
+//     constructor(name, price) {
+//         this.name = name;
+//         this.price = price;
+//     }
+// }
+// class ShoppingCart {
+//     constructor(customerName, initialTotalCost = 0) {
+//         this.customerName = customerName;
+//         this.items = [];
+//         this.totalCost = initialTotalCost;
+//     }
+//     addItem(product, quantity = 1) {
+//         this.items.push({ product, quantity });
+//         this.totalCost += product.price * quantity;
+//     }
+//     getCurrentTotalCost() {
+//         return this.totalCost;
+//     }
+//     checkout() {
+//         console.log(`Заказ оформлен для ${this.customerName}. Общая стоимость заказа: ${this.totalCost} рублей. Спасибо за покупку!`);
+//     }
 
-}
+// }
 
-const product1 = new Product("Карандаш", 7);
+// const product1 = new Product("Карандаш", 7);
 
-const product2 = new Product("Маркер", 10);
+// const product2 = new Product("Маркер", 10);
 
-const cart = new ShoppingCart("Корепин Александр", 0);
+// const cart = new ShoppingCart("Корепин Александр", 0);
 
-cart.addItem(product1, 3);
-cart.addItem(product2, 4);
+// cart.addItem(product1, 3);
+// cart.addItem(product2, 4);
 
-console.log(`Общая стоимость товора ${cart.getCurrentTotalCost()}`); //61
+// console.log(`Общая стоимость товора ${cart.getCurrentTotalCost()}`); //61
 
-cart.checkout(); // Заказ оформлен для John Doe. Общая стоимость заказа: 5 рублей. Спасибо за покупку!
+// cart.checkout(); // Заказ оформлен для John Doe. Общая стоимость заказа: 5 рублей. Спасибо за покупку!
+//--------------------------------------------------------
+// напишите функцию на javascript которая будет выводить в консоль числа от 0 до 1000, кратные трем и некратные 5, сумма цифр которых меньше 10
+// function translations () {
+//     for (let i = 0; i <= 1000; i++) {
+//         if (i % 3 === 0 && i % 5!== 0 && sumOfDigits(i) < 10) {
+//             console.log(i);
+//         }
+//     }
+    
+//     function sumOfDigits(num) {
+//         let sum = 0;
+//         while (num > 0) {
+//             sum += num % 10;
+//             num = Math.floor(num / 10); // Округляем дробное число вниз до целого. Это позволяет избежать путаницы с десятями. �� деление нацело приводит к числу без дробной части. ��нотакже, округление дробного числа
+            
+//         }
+//         return sum;
+//     }  // ��ункция для подсчета суммы цифр числа. Эта функция работает быстрее и эффективнее чем рекурсивная.
+    
+// }
+
+// translations(); // Выводит числа от 0 до 1000, кратные трем и некратные 5, сумма цифр которых меньше 10
+//----------------------------------------
+//Создайте конструктор, экземпляры которого будут возвращать инкрементированное число:
+// let increment = new Increment();
+// alert (increment); // 1
+// alert (increment); // 2
+// // alert (increment + increment); // 4
+// class Increment {
+//     constructor() {
+//         this.count = 0;
+//     }
+
+//     increment() {
+//         this.count++;
+//         return this.count;
+//     }
+    
+// }
+
+// // let increment = new Increment();
+//------------------------------------
+
+// Имеется текст:
+
+// HTTP — протокол прикладного уровня передачи данных,
+// изначально — в виде гипертекстовых документов в формате HTML,
+// в настоящее время используется для передачи произвольных данных.
+
+
+
+// Напишите код, который сделает этот текст максимально адаптивным с учётом норм и правил типографики, чтобы 
+// он выглядел аккуратно при любых разрешениях экранов с шириной не менее ширины слова "гипертекстовых".
+
+// Важно: не забывайте о том, что ширина слова "гипертекстовых" зависит от размера шрифта и размера экрана.
+
+// Напишите CSS-код таким образом, чтобы на странице отобразился квадрат размером 300x300px, внутри которого пять квадратов
+//  размером 100x100px — по одному в каждом углу и один по центру. Изменять HTML-код при этом нельзя.
+
+
+  
+
+
+
